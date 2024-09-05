@@ -1,0 +1,435 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+.logo01{
+    height: 100px;
+    width: 100px;
+}
+h1 {
+    font-weight: bold;  /* Makes the text bold */
+    font-size: 4rem;    /* Adjust the size as per your requirement (e.g., 3rem = 48px) */
+}
+
+h2, h3 {
+    color: #333;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+/* Navbar Styles */
+nav {
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+}
+
+/* Banner Section */
+.home-banner {
+    background-color: white;
+    /* background-color: #007bff; */
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.home-banner h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.home-banner p {
+    font-size: 18px;
+    margin-bottom: 20px;  
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #007bff;
+    border-radius: 5px;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+/* Career and Mentorship Sections
+.career-grid, .mentor-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.career-card, .mentor-card {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.career-card h3, .mentor-card h3 {
+    margin-top: 0;
+}
+
+.career-card p, .mentor-card p {
+    margin-bottom: 10px;
+} */
+
+/* Dashboard Section */
+.dashboard-content {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.dashboard-content div {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Footer Styles */
+/* footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: white;
+} */
+.home-banner img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+
+
+
+
+
+    /* margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100vh;
+  
+   
+    background-position: center; */
+}
+
+
+
+/* footer */
+/* Footer General Styles */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 20px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer-section p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-section a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Links */
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: white;
+    font-size: 14px;
+}
+
+.footer-section ul li a:hover {
+    color: #007bff;
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    gap: 10px;
+}
+
+.social-links li {
+    list-style-type: none;
+}
+
+.social-links li a {
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    background-color: #007bff;
+    border-radius: 5px;
+}
+
+.social-links li a:hover {
+    background-color: #0056b3;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    font-size: 14px;
+}
+
+
+
+
+
+/* Dropdown styling */
+.dropdown-container {
+    margin: 20px;
+    text-align: center;
+}
+
+#careerFieldDropdown, #engineeringDropdown, #healthcareDropdown {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Career section styling */
+.career-section {
+    margin: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    display: none; /* Initially hidden */
+}
+
+h2 {
+    color: #007BFF;
+}
+
+h3 {
+    margin-top: 10px;
+}
+
+.details-container {
+    margin-top: 20px;
+}
+
+.career-content {
+    display: none; /* Initially hidden */
+}
+
+.career-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+/* Close button styling */
+.close-btn {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #dc3545;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    background-color: #c82333;
+}
+
+
+
+/* header for carrer */
+
+/* Header Container */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #004080; /* Dark blue background */
+    color: #ffffff; /* White text */
+    padding: 15px 30px;
+    border-bottom: 3px solid #003366; /* Darker blue border for emphasis */
+}
+
+/* Logo */
+.logo img {
+    height: 120px; /* Adjust the logo size as needed */
+    width: 120px;
+}
+
+/* Header Title */
+.header-title h1 {
+    font-size: 28px;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+}
+
+/* Navigation Menu */
+.nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-menu li {
+    margin-left: 20px;
+}
+
+.nav-menu a {
+    color: #ffffff; /* White text */
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-menu a:hover {
+    background-color: #003366; /* Darker blue background on hover */
+    color: #ffffff; /* White text on hover */
+    border-radius: 5px;
+}
+
+
+/* for sliding photo on carrer */
+/* Photo Slider Container */
+
+
+
+/* Photo Slider Container */
+.photo-slider {
+    position: relative;
+    height: 0%;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Slider Container */
+.slider-container {
+    position: relative;
+}
+
+/* Slides */
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Images */
+.slide img {
+    width: 100%;
+    height: 60%;
+}
+
+/* Navigation Buttons */
+.prev, .next {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Add a fade-in effect */
+.fade {
+    animation: fade 1s ease-in-out;
+}
+
+@keyframes fade {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+  
+
+ 
