@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Mentor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <style>
+        body {
+            margin: 20px;
+        }
+        .select2-container .select2-selection--multiple {
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Career Mentor</h1>
+        <form id="career-form">
+            <div class="mb-3">
+                <label for="interests" class="form-label">Select Interests</label>
+                <select id="interests" name="interests" multiple="multiple" class="form-control"></select>
+            </div>
+            <div class="mb-3">
+                <label for="strengths" class="form-label">Select Strengths</label>
+                <select id="strengths" name="strengths" multiple="multiple" class="form-control"></select>
+            </div>
+            <button type="submit" class="btn btn-primary">Get Career Possibilities</button>
+        </form>
+        <hr>
+        <h3>Results</h3>
+        <p><strong>Career Possibilities:</strong> <span id="career-possibilities"></span></p>
+        <p><strong>Recommended Courses/Subjects:</strong> <span id="recommended-courses"></span></p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            const interests = {{ interests|tojson|safe }};
+            const strengths = {{ strengths|tojson|safe }};
+
+            // Initialize Select2 for Interests
+            $('#interests').select2({
+                data: interests.map(item => ({id: item, text: item})),
+                placeholder: 'Select Interests',
+                allowClear: true,
+                closeOnSelect: true
+            });
+
+            // Initialize Select2 for Strengths
+            $('#strengths').select2({
+                data: strengths.map(item => ({id: item, text: item})),
+                placeholder: 'Select Strengths',
+                allowClear: true,
+                closeOnSelect: true
+            });
+
+            // Handle form submission
+            $('#career-form').on('submit', function(e) {
+                e.preventDefault();
+
+                const selectedInterests = $('#interests').val();
+                const selectedStrengths = $('#strengths').val();
+
+                $.ajax({
+                    url: '/predict',
+                    method: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify({
+                        interests: selectedInterests,
+                        strengths: selectedStrengths
+                    }),
+                    success: function(response) {
+                        $('#career-possibilities').text(response.career_possibilities.join(', '));
+                        $('#recommended-courses').text(response.recommended_courses.join(', '));
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
