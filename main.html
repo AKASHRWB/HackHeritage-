@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Crafter</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .nav-link {
+            text-decoration: none;
+            color: black;
+            padding: 5px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+    
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: red; /* Underline color */
+            left: 0;
+            bottom: -5px;
+            transition: width 0.3s;
+        }
+    
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    
+        .nav-link:hover {
+            color: rgb(205, 16, 16); /* Text color on hover */
+        }
+    
+        /* Optional: Adjust margin for list items for better spacing */
+        li {
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav style="display: flex; align-items: center; justify-content: space-between;">
+            <div class="logo" style="display: flex; align-items: center;">
+                <a href="main.html">
+                    <img src="logo01.jpg" alt="Career Crafter" class="logo01" style="margin-right: 10px;">
+                </a>
+                <h1 style="margin: 0;">Career Crafter</h1>
+            </div>
+            <ul style="list-style: none; display: flex; margin: 0; padding: 0;">
+                <li style="margin-right: 15px;"><a href="main.html" class="nav-link">Home</a></li>
+                <li style="margin-right: 15px;"><a href="http://127.0.0.1:5000" class="nav-link">Career Exploration</a></li>
+                <li style="margin-right: 15px;"><a href="mentorship.html" class="nav-link">Mentorship</a></li>
+                <li style="margin-right: 15px;"><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="resources02.html" class="nav-link">Resources</a></li>
+            </ul>
+        </nav>
+        <hr style="margin: 0; color: rgb(205, 16, 16);">
+    </header>
+    <section class="home-banner">
+        <h2>Welcome to the Career Guidance Platform</h2>
+        <p>Your journey to discovering the right career starts here.</p>
+        <a href="http://127.0.0.1:5000" class="btn">Explore Careers</a>
+        <img src="banner1.svg" alt="Career Guidance Platform Banner">
+    </section>
+    <footer>
+        <div class="footer-container">
+            <!-- About Section -->
+            <div class="footer-section about">
+                <h3>About Us</h3>
+                <p>Career Guidance Platform is dedicated to helping students discover their true potential by providing personalized career counselling, mentorship, and resources. We aim to bridge the gap between education and the professional world, aligning with the NEP 2020 goals.</p>
+            </div>
+
+            <!-- Contact Section -->
+            <div class="footer-section contact">
+                <h3>Contact Us</h3>
+                <p>Email: <a href="mailto:info@careerguidanceplatform.com">info@careerguidanceplatform.com</a></p>
+                <p>Phone: +91 123-456-7890</p>
+                <p>Address: 123 Career Street, New Delhi, India</p>
+            </div>
+
+            <!-- Quick Links Section -->
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="main.html">Home</a></li>
+                    <li><a href="http://127.0.0.1:5000">Career Exploration</a></li>
+                    <li><a href="mentorship.html">Mentorship</a></li>
+                    <li><a href="resources02.html">Resources</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+
+            <!-- Social Media Section -->
+            <div class="footer-section social">
+                <h3>Follow Us</h3>
+                <ul class="social-links"> 
+                    <li><a href="#" target="_blank">Facebook</a></li>
+                    <li><a href="#" target="_blank">Twitter</a></li>
+                    <li><a href="#" target="_blank">LinkedIn</a></li>
+                    <li><a href="#" target="_blank">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p>&copy; 2024 Career Guidance Platform. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
